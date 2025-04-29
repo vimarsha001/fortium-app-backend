@@ -17,6 +17,9 @@ public class EmployeeController {
     List<Employee> getAll(){
         return employeeService.getAll();
     }
+    void addEmployee(Employee employee){
+        employeeService.addEmployee(employee);
+    }
     @DeleteMapping("/delete")
     void deleteEmployee(Integer id){
         employeeService.deleteEmployee(id);
