@@ -2,6 +2,8 @@ package edu.icet.ecom.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
+
 
 @Data
 @NoArgsConstructor
@@ -13,6 +15,8 @@ public class Employee {
     private String name;
     private String email;
     private String department;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
 
 }
 
