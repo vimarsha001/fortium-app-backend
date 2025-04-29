@@ -25,8 +25,12 @@ public class EmployeeController {
     void updateEmployee(Employee employee,Integer id){
         employeeService.updateEmployee(employee,id);
     }
-    @GetMapping
-    List<Employee> searchEmployeeByName(String name){}
-    Employee searchEmployeeByName(Integer id){
+    @GetMapping("/search")
+    List<Employee> searchEmployeeByName(String name){
+       return employeeService.searchEmployeeByName(name);
+    }
+    @GetMapping("/search")
+    Employee searchEmployeeById(Integer id){
+        return employeeService.searchEmployeeById(id);
     }
 }
