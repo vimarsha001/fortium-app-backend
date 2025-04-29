@@ -1,4 +1,4 @@
-package edu.icet.ecom.repository.custom.impl;
+package edu.icet.ecom.repository;
 
 import java.util.List;
 public interface CrudRepository <T,ID> extends SuperDao {
@@ -6,6 +6,6 @@ public interface CrudRepository <T,ID> extends SuperDao {
     void updateEmployee(T entity,Integer id);
     T searchEmployeeById(Integer id);
     List<T> searchEmployeeByName(String name);
-    void deleteEmployee(T entity);
+    void deleteEmployee(Integer id);
     List<T> getAll();
 }
