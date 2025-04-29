@@ -4,11 +4,10 @@ import edu.icet.ecom.dto.Employee;
 import edu.icet.ecom.service.custom.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-
-@CrossOrigin("")
+@CrossOrigin("http://localhost:4200")
 @RestController
+@RequestMapping("/employee")
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
@@ -17,6 +16,7 @@ public class EmployeeController {
     List<Employee> getAll(){
         return employeeService.getAll();
     }
+    @PostMapping("/add")
     void addEmployee(Employee employee){
         employeeService.addEmployee(employee);
     }
