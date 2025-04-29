@@ -1,10 +1,6 @@
 package edu.icet.ecom.dto;
-
 import lombok.*;
-
 import java.time.LocalDate;
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
