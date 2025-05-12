@@ -18,6 +18,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     final ModelMapper mapper;
     @Override
     public void addEmployee(Employee employee) {
+        System.out.print(mapper.map(employee,EmployeeEntity.class));
         employeeDao.addEmployee(mapper.map(employee,EmployeeEntity.class));
     }
     @Override

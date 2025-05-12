@@ -19,9 +19,10 @@ public class EmployeeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String phone;
     private String email;
     private String department;
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+    private String createdAt;
+    private String updatedAt;
 
 }
